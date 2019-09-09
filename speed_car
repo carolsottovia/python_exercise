@@ -1,0 +1,25 @@
+class Car:
+    def __init__(self, speed_max):
+        self.speed_max = speed_max
+        self.speed_actual = 0
+
+    def speed_up(self, delta=5):
+        maxima = self.speed_max
+        nova = self.speed_actual + delta
+        self.speed_actual = new if new <= max else max
+        return self.speed_actual
+
+    def brake(self, delta=5):
+        new = self.speed_actual - delta
+        self.speed_actual = new if new >= 0 else 0
+        return self.speed_actual
+
+
+if __name__ == '__main__':
+    c1 = Car(180)
+
+    for _ in range(25):
+        print(c1.speed_up(8))
+
+    for _ in range(10):
+        print(c1.brake(delta=20))
